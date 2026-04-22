@@ -14,11 +14,14 @@
         <section>
             <h2>Add a Book</h2>
             <form id="book-form">
-                <label for="book-title">Book title:</label>
-                <input type="text" id="book-title">
+                <div><label for="book-title">Book title:</label>
+                    <input type="text" id="book-title" name="book-title" required>
+                </div>
 
-                <label for="book-author">Author:</label>
-                <input type="text" id="book-author">
+                <div><label for="book-author">Author:</label>
+                    <input type="text" id="book-author" name="book-author" required>
+                </div>
+
 
                 <button id="add-book-btn" type="submit">Add Book</button>
             </form>
@@ -26,9 +29,9 @@
 
         <section>
             <h2>My Books</h2>
-            <div id="book-list">
+            <ul id="book-list">
 
-            </div>
+            </ul>
         </section>
     </main>
 </body>
