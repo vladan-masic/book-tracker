@@ -9,7 +9,14 @@ bookForm.addEventListener("submit", function (event) {
   const title = titleInput.value;
   const author = authorInput.value;
 
+  if (title === "" || author === "") {
+    return;
+  }
+
   const newBook = document.createElement("li");
-  newBook.textContent = title + " " + author;
+  newBook.textContent = title + " by " + author;
   bookList.appendChild(newBook);
+
+  titleInput.value = "";
+  authorInput.value = "";
 });
