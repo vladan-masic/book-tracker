@@ -25,6 +25,6 @@ bookForm.addEventListener("submit", function (event) {
   authorInput.value = "";
 
   deleteBtn.addEventListener("click", function (event) {
-    newBook.removeChild();
+    newBook.remove();
   });
 });
