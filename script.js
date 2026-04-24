@@ -18,7 +18,7 @@ bookForm.addEventListener("submit", function (event) {
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Remove";
 
-  bookDetails.textContent = title + " by " + author + " ";
+  bookDetails.textContent = title + " by " + author;
   newBook.appendChild(bookDetails);
   newBook.appendChild(deleteBtn);
   bookList.appendChild(newBook);

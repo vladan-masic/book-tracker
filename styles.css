@@ -60,6 +60,11 @@ ul {
   padding-left: 20px;
 }
 
+#book-list {
+  list-style: none;
+  padding-left: 0;
+}
+
 #book-list li {
   display: flex;
   justify-content: space-between;
@@ -74,4 +79,10 @@ ul {
 
 #book-list button {
   background-color: lightcoral;
+  border: none;
+  color: white;
+}
+
+#book-list button:hover {
+  background-color: indianred;
 }
