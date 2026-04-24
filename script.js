@@ -31,7 +31,12 @@ bookForm.addEventListener("submit", function (event) {
 
   readBtn.addEventListener("click", function () {
     newBook.classList.toggle("read");
-    readBtn.textContent = "Unread";
+
+    if (newBook.classList.contains("read")) {
+      readBtn.textContent = "Mark as unread";
+    } else {
+      readBtn.textContent = "Mark as read";
+    }
   });
 
   deleteBtn.addEventListener("click", function (event) {
