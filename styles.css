@@ -81,6 +81,11 @@ ul {
   text-decoration: line-through;
 }
 
+#book-list div {
+  display: flex;
+  gap: 5px;
+}
+
 .read-btn {
   background-color: lightgreen;
   border: none;

@@ -15,6 +15,7 @@ bookForm.addEventListener("submit", function (event) {
 
   const newBook = document.createElement("li");
   const bookDetails = document.createElement("span");
+  const actions = document.createElement("div");
   const readBtn = document.createElement("button");
   readBtn.classList.add("read-btn");
   readBtn.textContent = "Mark as read";
@@ -23,9 +24,10 @@ bookForm.addEventListener("submit", function (event) {
   deleteBtn.textContent = "Remove";
 
   bookDetails.textContent = title + " by " + author;
+  actions.appendChild(readBtn);
+  actions.appendChild(deleteBtn);
   newBook.appendChild(bookDetails);
-  newBook.appendChild(readBtn);
-  newBook.appendChild(deleteBtn);
+  newBook.appendChild(actions);
   bookList.appendChild(newBook);
 
   titleInput.value = "";
