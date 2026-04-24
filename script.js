@@ -45,7 +45,7 @@ function renderBook(book) {
 
   deleteBtn.addEventListener("click", function (event) {
     books = books.filter(function (currentBook) {
-      return currentBook !== book;
+      return currentBook.id !== book.id;
     });
     newBook.remove();
     localStorage.setItem("books", JSON.stringify(books));
@@ -65,6 +65,7 @@ bookForm.addEventListener("submit", function (event) {
   }
 
   const book = {
+    id: Date.now(),
     title: title,
     author: author,
     read: false,
