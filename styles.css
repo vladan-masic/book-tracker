@@ -86,3 +86,7 @@ ul {
 #book-list button:hover {
   background-color: indianred;
 }
+
+.read span {
+  text-decoration: line-through;
+}
