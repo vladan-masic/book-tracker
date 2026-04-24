@@ -14,10 +14,12 @@ bookForm.addEventListener("submit", function (event) {
   }
 
   const newBook = document.createElement("li");
+  const bookDetails = document.createElement("span");
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Remove";
 
-  newBook.textContent = title + " by " + author;
+  bookDetails.textContent = title + " by " + author + " ";
+  newBook.appendChild(bookDetails);
   newBook.appendChild(deleteBtn);
   bookList.appendChild(newBook);
 
