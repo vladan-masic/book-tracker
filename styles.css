@@ -77,13 +77,19 @@ ul {
   background-color: white;
 }
 
+#book-list li span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
 .read span {
   text-decoration: line-through;
 }
 
-#book-list div {
+.book-actions {
   display: flex;
   gap: 5px;
+  flex-shrink: 0;
 }
 
 .read-btn {
