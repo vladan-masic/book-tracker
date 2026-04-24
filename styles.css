@@ -77,16 +77,27 @@ ul {
   background-color: white;
 }
 
-#book-list button {
+.read span {
+  text-decoration: line-through;
+}
+
+.read-btn {
+  background-color: lightgreen;
+  border: none;
+  color: black;
+}
+
+.read-btn:hover {
+  background-color: mediumseagreen;
+  color: white;
+}
+
+.delete-btn {
   background-color: lightcoral;
   border: none;
   color: white;
 }
 
-#book-list button:hover {
+.delete-btn:hover {
   background-color: indianred;
-}
-
-.read span {
-  text-decoration: line-through;
 }
