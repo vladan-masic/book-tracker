@@ -37,22 +37,30 @@ function renderBook(book) {
   bookList.appendChild(newBook);
 
   readBtn.addEventListener("click", function () {
-    newBook.classList.toggle("read");
     book.read = !book.read;
-    localStorage.setItem("books", JSON.stringify(books));
-    readBtn.textContent = book.read ? "Mark as unread" : "Mark as read";
+    saveBooks();
+    renderBooks();
   });
 
   deleteBtn.addEventListener("click", function (event) {
     books = books.filter(function (currentBook) {
       return currentBook.id !== book.id;
     });
-    newBook.remove();
-    localStorage.setItem("books", JSON.stringify(books));
+    renderBooks();
+    saveBooks();
   });
 }
 
-books.forEach(renderBook);
+function renderBooks() {
+  bookList.innerHTML = "";
+  books.forEach(renderBook);
+}
+
+function saveBooks() {
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+renderBooks();
 
 bookForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -72,9 +80,9 @@ bookForm.addEventListener("submit", function (event) {
   };
 
   books.push(book);
-  localStorage.setItem("books", JSON.stringify(books));
+  saveBooks();
 
-  renderBook(book);
+  renderBooks();
 
   titleInput.value = "";
   authorInput.value = "";
